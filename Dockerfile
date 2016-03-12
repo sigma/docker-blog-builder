@@ -1,4 +1,8 @@
-FROM gliderlabs/alpine:3.3
+FROM ubuntu-debootstrap:14.04
 MAINTAINER Yann Hodique <yann.hodique@gmail.com>
 
-RUN apk add --no-cache bash git openssh-client py-setuptools py-pygments
+RUN apt-get update -q \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -qy git openssh-client py-pygments \
+  && apt-get clean \
+  && rm -rf /var/lib/apt
+

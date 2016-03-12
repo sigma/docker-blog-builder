@@ -1,4 +1,4 @@
-FROM ubuntu-debootstrap:14.04
+FROM ubuntu:15.10
 MAINTAINER Yann Hodique <yann.hodique@gmail.com>
 
 RUN apt-get update -q \

@@ -1,6 +1,6 @@
-FROM alpine:3.5
+FROM alpine:3.6
 MAINTAINER Yann Hodique <yann.hodique@gmail.com>
 
-RUN apk add --no-cache bash git openssh-client python3
+RUN apk add --no-cache bash git openssh-client python3 curl
 RUN pip3 install --upgrade pip
 RUN pip3 install pygments pygments-style-solarized
